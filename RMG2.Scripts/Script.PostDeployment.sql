@@ -12,5 +12,5 @@ Post-Deployment Script Template
 SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
-:r ".\RMG BOSS2 initial scripts\spBOSS_ConfigurationCreateSingle.sql"
+:r ".\RMG_BOSS2_initial_scripts\spBOSS_ConfigurationCreateSingle.sql"
 GO
