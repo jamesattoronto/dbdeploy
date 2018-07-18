@@ -58,6 +58,7 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="RMG BOSS2 initial scripts" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Deploy.ps1" />
@@ -65,5 +66,8 @@
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Script.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="RMG BOSS2 initial scripts\spBOSS_ConfigurationCreateSingle.sql" />
   </ItemGroup>
 </Project>

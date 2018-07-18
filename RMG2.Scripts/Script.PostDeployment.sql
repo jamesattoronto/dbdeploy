@@ -1,19 +1,16 @@
 ﻿/*
-Post-Deployment Scipt Template							
+Post-Deployment Script Template							
 --------------------------------------------------------------------------------------
- This file contains SQL statements that will be appended to the build scipt.		
- Use SQLCMD syntax to include a file in the post-deployment scipt.			
- Example:r       :r  .\myfile.sql"								
- Use SQLCMD syntax to efeence a vaiable in the post-deployment scipt.		
- Example:r       :r setva TableName MyTable							
-               SELECT * FOM [$(TableName)]					
+ This file contains SQL statements that will be appended to the build script.		
+ Use SQLCMD syntax to include a file in the post-deployment script.			
+ Example:      :r .\myfile.sql								
+ Use SQLCMD syntax to reference a variable in the post-deployment script.		
+ Example:      :setvar TableName MyTable							
+               SELECT * FROM [$(TableName)]					
 --------------------------------------------------------------------------------------
 */
 SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
-GO
-:r ".\JIRAs\SCHED-1847\SCHED-1847_CreateTables.sql"
-GO
-:r ".\JIRAs\SCHED-1847\SCHED-1847_CommissionsProc.sql"
+:r ".\RMG BOSS2 initial scripts\spBOSS_ConfigurationCreateSingle.sql"
 GO
