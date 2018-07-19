@@ -61,7 +61,9 @@
     <Folder Include="RMG_BOSS2_initial_scripts" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Deploy.ps1" />
+    <None Include="Deploy.ps1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="HowTo.mkd" />
   </ItemGroup>
   <ItemGroup>
@@ -70,14 +72,9 @@
   <ItemGroup>
     <Build Include="RMG_BOSS2_initial_scripts\spBOSS_ConfigurationCreateSingle.sql" />
   </ItemGroup>
-  <Import Project="$(SolutionDir)\packages\OctoPack.3.4.6\tools\OctoPack.targets" 
-        Condition="Exists('$(SolutionDir)\packages\OctoPack.3.4.6\tools\OctoPack.targets')" />
-	<Target Name="EnsureOctoPackImported" 
-			BeforeTargets="BeforeBuild" 
-			Condition="'$(OctoPackImported)' == ''">
-		<Error Condition="!Exists('$(SolutionDir)\packages\OctoPack.3.4.6\tools\OctoPack.targets') And ('$(RunOctoPack)' != '' And $(RunOctoPack))" 
-			   Text="Please update the OctoPack path in the database project." />
-		<Error Condition="Exists('$(SolutionDir)\packages\OctoPack.3.4.6\tools\OctoPack.targets') And ('$(RunOctoPack)' != '' And $(RunOctoPack))" 
-			   Text="OctoPack couldn't run." />
-	</Target>
+  <Import Project="$(SolutionDir)\packages\OctoPack.3.4.6\tools\OctoPack.targets" Condition="Exists('$(SolutionDir)\packages\OctoPack.3.4.6\tools\OctoPack.targets')" />
+  <Target Name="EnsureOctoPackImported" BeforeTargets="BeforeBuild" Condition="'$(OctoPackImported)' == ''">
+    <Error Condition="!Exists('$(SolutionDir)\packages\OctoPack.3.4.6\tools\OctoPack.targets') And ('$(RunOctoPack)' != '' And $(RunOctoPack))" Text="Please update the OctoPack path in the database project." />
+    <Error Condition="Exists('$(SolutionDir)\packages\OctoPack.3.4.6\tools\OctoPack.targets') And ('$(RunOctoPack)' != '' And $(RunOctoPack))" Text="OctoPack couldn't run." />
+  </Target>
 </Project>
