@@ -10,7 +10,7 @@ Post-Deployment Script Template
 --------------------------------------------------------------------------------------
 */
 
-/* just make change to triger rebuild */
+/* just make change to triger rebuild, try agin*/
 SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
