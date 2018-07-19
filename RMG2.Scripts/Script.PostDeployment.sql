@@ -9,6 +9,8 @@ Post-Deployment Script Template
                SELECT * FROM [$(TableName)]					
 --------------------------------------------------------------------------------------
 */
+
+/* just make change to triger rebuild */
 SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
