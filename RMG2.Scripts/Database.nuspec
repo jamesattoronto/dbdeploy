@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Database</id>
+    <version>1.0.0.0</version>
+    <authors>James Chai</authors>
+    <description>NuGet package for DB</description>
+  </metadata>
+  <files>
+    <file src="RMG2.Scripts.dacpac" target="Content" />
+    <file src="publish.xml" target="Content" />
+    <file src="Deploy.ps1" />
+  </files>
+</package>
