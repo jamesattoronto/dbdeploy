@@ -76,7 +76,7 @@
     <PostDeploy Include="Script.PostDeployment.sql" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="RMG_BOSS2_initial_scripts\spBOSS_ConfigurationCreateSingle.sql" />
+    <None Include="RMG_BOSS2_initial_scripts\spBOSS_ConfigurationCreateSingle.sql" />
   </ItemGroup>
   <Import Project="$(SolutionDir)\packages\OctoPack.3.4.6\tools\OctoPack.targets" Condition="Exists('$(SolutionDir)\packages\OctoPack.3.4.6\tools\OctoPack.targets')" />
   <Target Name="EnsureOctoPackImported" BeforeTargets="BeforeBuild" Condition="'$(OctoPackImported)' == ''">
