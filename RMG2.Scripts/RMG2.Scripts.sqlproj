@@ -61,12 +61,15 @@
     <Folder Include="RMG_BOSS2_initial_scripts" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Deploy.ps1">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <None Include="Deploy.ps2">
+      <CopyToOutputDirectory>DoNotCopy</CopyToOutputDirectory>
     </None>
     <None Include="HowTo.mkd" />
     <None Include="Database.nuspec">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy.ps1">
+      <CopyToOutputDirectory>DoNotCopy</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
